@@ -18,7 +18,7 @@ for packet in capture:
         # Extract SIP portion of the packet
         sip_layer = packet.sip
 
-        # Extract the desired fields (To, From, Call-ID)
+        # Extract the desired fields
         to_field = sip_layer.get_field('To').show
         from_field = sip_layer.get_field('From').show
         call_id_field = sip_layer.get_field('Call-ID').show
