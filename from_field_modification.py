@@ -18,7 +18,7 @@ for packet in packets:
         if 'SIP' in ip_layer.payload:
             sip_layer = ip_layer.payload['SIP']
 
-            # Extract desired fields (To, From, Call-ID)
+            # Extract desired fields 
             to_field = sip_layer.get_field('To')
             from_field = sip_layer.get_field('From')
             call_id_field = sip_layer.get_field('Call-ID')
@@ -26,7 +26,7 @@ for packet in packets:
             # Get the current value of the From field
             from_value = from_field.show
 
-            # Modify the From field to include name as a prefix
+            # Modify the From field 
             modified_from_value = 'Bushra' + from_value
 
             # Set the modified From field value
